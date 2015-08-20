@@ -1,0 +1,21 @@
+JSF xmlns URI not registered in IntelliJ IDEA
+---------------------------------------------
+
+With unregistered resources, the first solution is to use the "Fetch External Resource" quickfix. If that fails, as it has for you in this case, (usually because the "location" is in name only) you need to manually configure it.
+
+To Manually Configure
+
+If the resource (i.e. the .xsd, .dtd, etc.) exists in one of your library jars, skip to step 2. Otherwise, download a copy of the resource. Put it somewhere convenient on your system.
+In IDEA, with your cursor on the error, open the Quick Fix / Intentions menu by typing Alt+Enter and select "Manually Setup External Resource". (If you do not have this option (based on IntelliJ IDEA version) go to the next section for instructions.)
+If the resource is in a jar, select the Schemas tab and select the resource from the appropriate jar. If you downloaded it, select the Explorer tab (may be named Finder in Mac) and navigate to and select the file you downloaded.
+Click OK and let IDEA index the resource.
+
+To Edit or Set via IDE Settings
+
+Open the settings Dialog via Ctrl+Alt+Enter or File > Settings.
+To configure for all future new projects so this schema is avaiable, open the similar dialog via File > Other Settings > Default Settings
+In the Project Settings section, find the Schemas and DTDs node.
+Configure the desired schema. There are add, edit and delete icons in the upper right. Like above, you can select a file within a library via the Schemas tab, or your file system via the Explorer tab.
+UPDATE
+
+To answer (for future reference) a comment on a similar question referencing this one, here is information on where to find JSF Taglib resources: The various JSF Taglib definitions (for JSF 2.x and above) can be found in the com/sun/faces/metadata/taglib directory of the com.sun.faces:jsf-impl jar. The jsf-impl JAR file can be downloaded from maven central among other places.

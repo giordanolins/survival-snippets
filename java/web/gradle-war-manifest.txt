@@ -1,0 +1,8 @@
+war {
+    doFirst {
+        manifest {
+            attributes("Implementation-Title": project.name, "Implementation-Version": version, "Implementation-Timestamp": new Date())
+        }
+    }
+    archiveName 'infoserverws.war'
+}
