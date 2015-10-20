@@ -1,0 +1,8 @@
+The Android SDK is 32-bit, therefore on a 64-bit Linux system you need to have the package ia32-libs installed. For Ubuntu you can do this via the following command:
+
+apt-get install ia32-libs 
+
+On Ubuntu 13.04 you also have to install the OpenGL support. This can be done on Ubuntu 13.04 via following command:
+
+# install OpenGL support
+sudo apt-get install libgl1-mesa-dev 

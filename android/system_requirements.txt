@@ -1,0 +1,5 @@
+Development for Android can be done on a reasonably sized computer. For a nice experience a modern computer is recommended. For example:
+
+- 2.6 GHz CPU
+- 8 GB of memory (at least)
+- An SSD speeds up the start of the Android emulator significantly.
